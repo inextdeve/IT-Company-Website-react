@@ -1,0 +1,97 @@
+.news__container {
+  display: flex;
+  gap: 4.5rem;
+  align-items: center;
+}
+.news__container > div {
+  flex-basis: 50%;
+}
+.news__container > div:first-of-type {
+  box-shadow: var(--box-shadow);
+  border-radius: var(--radius);
+  height: fit-content;
+  position: relative;
+}
+.news__container > div:first-of-type .swiper-pagination {
+  left: 100%;
+  bottom: 15%;
+  width: fit-content;
+  transform: translateX(-100%);
+  padding-right: 3.5rem;
+}
+.news__hot__feed {
+  padding: 3rem 3.5rem;
+}
+.news__hot__feed p {
+  margin: 1.7rem 0;
+  line-height: 1.5;
+}
+.news__hot__feed__author {
+  display: flex;
+  gap: 1.3rem;
+  align-items: center;
+}
+.news__hot__feed__author img {
+  display: block;
+  border-radius: 5rem;
+  height: 60px;
+  width: 60px;
+  object-fit: cover;
+}
+.news__hot__feed__author > div {
+  line-height: 1.5;
+}
+.news__latest h1 {
+  margin-bottom: 2rem;
+}
+.news__latest__feed {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0rem;
+  align-items: center;
+}
+.news__latest__feed img {
+  display: block;
+  width: 80%;
+  border-radius: var(--radius);
+  height: 120px;
+  object-fit: cover;
+}
+.news__latest__feed p {
+  font-size: 0.88rem;
+  margin: 0.5rem 0 1rem 0;
+}
+.news__latest__feed .feed_info {
+  color: var(--color-blue-primary);
+  font-size: 0.8rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+}
+/* ================ MEDIA QUERIES (MEDIUM DEVICES) ============= */
+@media screen and (max-width: 1024px) {
+  .news__container {
+    flex-wrap: wrap;
+  }
+  .news__container > div {
+    flex-basis: 100%;
+  }
+}
+/* ================ MEDIA QUERIES (SMALL DEVICES) ============= */
+@media screen and (max-width: 600px) {
+  .news__latest__feed {
+    grid-template-columns: 1fr;
+    box-shadow: var(--box-shadow);
+    padding: 1rem;
+    border-radius: var(--radius);
+    margin-bottom: 2rem;
+  }
+  .news__latest__feed img {
+    width: 90%;
+    margin: 0 auto 1rem auto;
+    margin-bottom: 1rem;
+  }
+  .news__hot__feed {
+    padding: 2rem 2.5rem;
+  }
+}

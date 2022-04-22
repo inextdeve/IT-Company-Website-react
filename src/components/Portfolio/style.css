@@ -1,0 +1,22 @@
+.container__portfolio {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 1fr 1fr;
+}
+.portfolio__header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4rem;
+  padding-left: 3rem;
+}
+
+.portfolio__header button {
+  width: fit-content;
+}
+/* ================ MEDIA QUERIES (SMALL DEVICES) ============= */
+@media screen and (max-width: 600px) {
+  .container__portfolio {
+    grid-template-columns: 1fr;
+  }
+}

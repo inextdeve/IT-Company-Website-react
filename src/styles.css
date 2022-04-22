@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+
+:root {
+  --color-violet: #262250;
+  --color-blue-primary: #4270ec;
+  --color-white: white;
+  --color-light-gray: #fbece8;
+  --linear-bg: linear-gradient(
+    40deg,
+    rgba(65, 82, 205, 1) 0%,
+    rgba(203, 63, 183, 1) 35%,
+    rgba(250, 192, 120, 1) 100%
+  );
+  --box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+    rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+  --radius: 1.5rem;
+  --transition: all 400ms ease;
+  --container-width-lg: 75%;
+  --container-width-md: 80%;
+  --container-width-sm: 90%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-violet);
+}
+img {
+  display: block;
+}
+a:hover {
+  color: var(--color-blue-primary);
+}
+
+.btn {
+  outline: none;
+  border: 1px solid transparent;
+  color: var(--color-blue-primary);
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+  padding: 0.65rem 1.3rem;
+  border-radius: 6rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: transparent;
+  transition: var(--transition);
+}
+.btn-primary {
+  background: var(--color-blue-primary);
+  color: white;
+}
+.btn:hover {
+  border-color: var(--color-blue-primary);
+  color: var(--color-blue-primary);
+  background: transparent;
+}
+.container {
+  width: var(--container-width-lg);
+  margin: 0 auto;
+}
+.pos-rel {
+  position: relative;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins";
+  background: var(--color-white);
+  line-height: 1.25;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-violet);
+}
+h1 {
+  font-size: 2rem;
+}
+.text {
+  font-size: 0.9rem;
+  color: gray;
+  margin: 1rem 0;
+}
+section,
+footer {
+  margin-top: 5rem !important;
+}
+ul {
+  list-style: none;
+}

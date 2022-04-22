@@ -1,0 +1,91 @@
+.about__container > .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7rem;
+}
+.about__container {
+  position: relative;
+}
+.about__container::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  height: 120%;
+  width: 40%;
+  background: var(--linear-bg);
+  z-index: -1;
+  border-radius: var(--radius) 0 0 var(--radius);
+  box-shadow: var(--box-shadow);
+}
+.about__buttons button {
+  margin-right: 1.5rem;
+}
+.about__buttons a span {
+  margin-right: 10px;
+}
+.about__image img {
+  width: 90%;
+  border-radius: var(--radius);
+  box-shadow: var(--box-shadow);
+}
+.about__image {
+  position: relative;
+}
+
+.CircularProgressbar {
+  width: 4rem;
+}
+.CircularProgressbar .CircularProgressbar-path {
+  stroke: var(--color-blue-primary);
+}
+.CircularProgressbar .CircularProgressbar-text {
+  fill: var(--color-blue-primary);
+}
+.about__progress {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 1.4rem;
+  background: white;
+  border-radius: var(--radius);
+  padding: 1rem;
+  width: min-content;
+  position: absolute;
+  top: 50%;
+  left: -10%;
+  box-shadow: var(--box-shadow);
+}
+.about__progress h4 {
+  width: max-content;
+}
+
+/* ================ MEDIA QUERIES (MEDIUM DEVICES) ============= */
+@media screen and (max-width: 1024px) {
+  .about__container .container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .about__container::before {
+    display: none;
+  }
+}
+/* ================ MEDIA QUERIES (SMALL DEVICES) ============= */
+@media screen and (max-width: 600px) {
+  .about__container .container {
+    width: var(--container-width-lg) !important;
+  }
+  .about__buttons {
+    display: grid;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .about__buttons button {
+    margin: 0;
+  }
+  .about__buttons a {
+    text-align: center;
+  }
+}

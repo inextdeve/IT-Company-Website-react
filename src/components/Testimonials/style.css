@@ -1,0 +1,33 @@
+.container__testimonials {
+  overflow: hidden;
+  width: 100% !important;
+}
+.container__testimonials h1 {
+  margin-bottom: 2rem;
+}
+.testimonials__slide {
+  margin: 8rem;
+}
+.container__testimonials .swiper {
+  overflow: visible;
+  margin-bottom: 5rem;
+}
+.testimony {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  box-shadow: var(--box-shadow);
+  background: var(--color-white);
+  border-radius: var(--radius);
+  padding: 2.2rem 2rem;
+  align-items: center;
+  gap: 1rem;
+}
+.testimony p:last-of-type {
+  font-weight: 100;
+}
+.testimony__avatar img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4rem;
+}

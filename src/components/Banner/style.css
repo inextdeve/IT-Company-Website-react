@@ -1,0 +1,28 @@
+.banner__container {
+  background: var(--linear-bg);
+}
+.banner__container .container {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0;
+}
+.banner__container h1 {
+  color: var(--color-white);
+  line-height: 1.5;
+}
+
+/* ================ MEDIA QUERIES (MEDIUM DEVICES) ============= */
+@media screen and (max-width: 1024px) {
+  .banner__container .container {
+    display: block;
+    text-align: center;
+  }
+  .banner__container .container h1 {
+    margin-bottom: 1.5rem;
+  }
+}
+/* ================ MEDIA QUERIES (SMALL DEVICES) ============= */
+@media screen and (max-width: 600px) {
+}
