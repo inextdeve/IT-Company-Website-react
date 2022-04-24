@@ -62,7 +62,7 @@ class News extends Component {
         <Swiper className="news__hot" pagination={true} modules={[Pagination]}>
           {this.hotNews.map((feed, index) => {
             return (
-              <SwiperSlide>
+              <SwiperSlide key={`news-hot-${index}`}>
                 <HotNews
                   title={feed.title}
                   text={feed.text}
@@ -77,9 +77,10 @@ class News extends Component {
         </Swiper>
         <div className="news__latest">
           <h1>Get The Latest News Here</h1>
-          {this.lastestNews.map((feed) => {
+          {this.lastestNews.map((feed, index) => {
             return (
               <LatestNews
+                key={`latest-news-${index}`}
                 img={feed.img}
                 date={feed.date}
                 author={feed.author}

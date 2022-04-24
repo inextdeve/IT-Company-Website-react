@@ -41,6 +41,7 @@ class Links extends Component {
           {this.links.map((link, index) => {
             return (
               <a
+                key={`link-${index}`}
                 className={!index ? "active" : ""}
                 href={`#${link}`}
                 onClick={this.toggleVisibility}

@@ -30,23 +30,26 @@ class Portfolio extends Component {
   render() {
     return (
       <section className="container container__portfolio" id="portfolio">
-        {/* <div className="portfolio__header">
-          <h1>See Our Works Or Portfolio</h1>
-          <button className="btn btn-primary">More About</button>
-        </div> */}
         {this.works.map((work, index) => {
           if (index == 1) {
             return (
-              <>
+              <div key={`our-work-${index}`}>
                 <div className="portfolio__header">
                   <h1>See Our Works Or Portfolio</h1>
                   <button className="btn btn-primary">More About</button>
                 </div>
                 <Work img={work.img} title={work.title} text={work.text} />
-              </>
+              </div>
             );
           }
-          return <Work img={work.img} title={work.title} text={work.text} />;
+          return (
+            <Work
+              key={`work-else-${index}`}
+              img={work.img}
+              title={work.title}
+              text={work.text}
+            />
+          );
         })}
       </section>
     );
