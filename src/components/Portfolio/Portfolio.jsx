@@ -31,7 +31,7 @@ class Portfolio extends Component {
     return (
       <section className="container container__portfolio" id="portfolio">
         {this.works.map((work, index) => {
-          if (index == 1) {
+          if (index === 1) {
             return (
               <div key={`our-work-${index}`}>
                 <div className="portfolio__header">
